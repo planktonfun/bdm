@@ -3,9 +3,11 @@
 	<title>kzarka asmr</title>
 	<style type="text/css" media="screen">
 		* { margin:0; }
-		body { background: black; }
+		body { background: black;
+		    overflow: hidden;
+		   }
 		video {
-			width: fit-content;
+			width: 100%;
 		    margin: 0;
 		    position: absolute;
 		    top: 50%;
@@ -13,9 +15,26 @@
 		    margin-right: -50%;
 		    transform: translate(-50%, -50%);
 		}
+		#eh {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
 	</style>
 </head>
 <body>
-<video src="./asmr.mp4" loop="true" autoplay="true"></video>
-<audio src="./asmr.mp3" loop="true" autoplay="true"></video>
+<video id="a" src="./asmr.mp4" loop="true" autoplay="true"></video>
+<audio id="b" src="./asmr.mp3" loop="true" autoplay="true"></audio>
+	<button id="eh"  onclick="myFunction()">click to play</button>
+	<script>
+		function myFunction() {
+
+			var eh = document.getElementById("eh");
+			eh.style.display = "none";
+			var a = document.getElementById("a");
+			var b = document.getElementById("b");
+			a.play();
+			b.play();
+		}
+	</script>
 </body>
