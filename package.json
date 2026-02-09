@@ -1,0 +1,24 @@
+{
+  "name": "bdm",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/planktonfun/bdm#readme",
+  "bugs": {
+    "url": "https://github.com/planktonfun/bdm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planktonfun/bdm.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "(cd src && node relay.js) & (cd src && node server.js) & wait"
+  },
+  "dependencies": {
+    "ws": "^8.19.0"
+  }
+}
