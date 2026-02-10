@@ -118,7 +118,7 @@ function applyRender() {
     });
 }
 
-globalThis.applyRender = applyRenderl
+globalThis.applyRender = applyRender;
 
 /*
 // Testing

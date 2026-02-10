@@ -15,7 +15,7 @@ globalThis.generateUUID = generateUUID;
 // Pro/Competitive (FPS/Fighting): <15–30 ms. Competitive players often aim for sub-20ms to ensure "instant" reactions.
 // Enthusiast/Casual: <40–50 ms. At 50 ms and higher, the delay becomes noticeable to most players.
 // General/Slow-paced: <100 ms. For single-player or turn-based games, higher latency is acceptable.
-const LATENCY_MS = 50;
+const LATENCY_MS = 16;
 const CLIENT_TICK_AHEAD_SECONDS = 3; // acceptable drift from the server before triggering a reset
 const INPUT_LATENCY_MS = 50; // compensate latency by delaying inputs (this will be felt both local and remote)
 const RENDER_FPS = 60; // this depends on your game logic

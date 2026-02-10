@@ -49,7 +49,7 @@ stateSchema.fields.gameState.fields.inputHistory.lengthBits = 32;
 // applyEnumSchema(stateSchema, 'inputState', inputTypes);
 applyEnumSchema(stateSchema, 'input', inputTypes);
 
-console.log(stateSchema);
+// console.log(stateSchema);
 
 ObjectTemplates.eventPacker = makeSerializer(eventSchema);
 ObjectTemplates.statePacker = makeSerializer(stateSchema);
@@ -592,9 +592,9 @@ class Game {
     3. Combat
     4. Death cleanup
 */
-    // for (var i = 0; i < this.speedUpRate; i++) {
+    for (var i = 0; i < this.speedUpRate; i++) {
       this.gameState.processInput(this.inputState);
-    // }
+    }
   }
 
   hashString(handle) {
