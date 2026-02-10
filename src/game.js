@@ -594,6 +594,9 @@ class Game {
 */
     for (var i = 0; i < this.speedUpRate; i++) {
       this.gameState.processInput(this.inputState);
+      if(this.gameState.gameOver) {
+        this.gameState = new GameState(++this.seed); // new game different location
+      }
     }
   }
 
